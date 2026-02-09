@@ -1,5 +1,5 @@
 <template>
-<div>for axios testing</div>
+    Pinia A
 </template>
 
 <script setup></script>

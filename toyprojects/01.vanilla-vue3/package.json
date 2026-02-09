@@ -9,18 +9,21 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "pinia": "^3.0.4",
+    "vue": "^3.2.13",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
+    "@babel/eslint-parser": "^7.28.6",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "axios": "^1.13.5",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "msw": "^2.12.9"
+    "eslint-plugin-vue": "^10.7.0",
+    "msw": "^2.12.9",
+    "vue-eslint-parser": "^10.2.0"
   },
   "eslintConfig": {
     "root": true,
