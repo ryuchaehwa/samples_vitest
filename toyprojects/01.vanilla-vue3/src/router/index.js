@@ -10,10 +10,10 @@ import ParentC from "@/components/inheritance/ParentC.vue";
 import ParentB from "@/components/inheritance/ParentB.vue";
 import PiniaA from "@/components/pinia/PiniaA.vue";
 import PiniaB from "@/components/pinia/PiniaB.vue";
-import MainComponent from "@/components/views/MainComponent.vue";
-import InheritanceComponent from "@/components/views/InheritanceComponent.vue";
-import PiniaComponent from "@/components/views/PiniaComponent.vue";
-import AxiosComponent from "@/components/views/AxiosComponent.vue";
+import MainComponent from "@/views/MainComponent.vue";
+import InheritanceComponent from "@/views/InheritanceComponent.vue";
+import PiniaComponent from "@/views/PiniaComponent.vue";
+import AxiosComponent from "@/views/AxiosComponent.vue";
 
 
 const routes = [
@@ -26,7 +26,7 @@ const routes = [
                 component: AxiosComponent,
                 children: [
                     {
-                        path: '#',
+                        path: '',
                         component: AxiosMocking
                     }
                 ]
@@ -36,32 +36,32 @@ const routes = [
                 component: InheritanceComponent,
                 children: [
                         {
-                            path: 'inheritance/p-a',
+                            path: 'p-a',
                             component: ParentA,
                         },
                         
                         {
-                            path: 'inheritance/p-b',
+                            path: 'p-b',
                             component: ParentB,
                         },
                         {
-                            path: 'inheritance/p-C',
+                            path: 'p-C',
                             component: ParentC,
                         },
                         {
-                            path: 'inheritance/c-a',
+                            path: 'c-a',
                             component: ChildA,
                         },
                         {
-                            path: 'inheritance/c-b',
+                            path: 'c-b',
                             component: ChildB,
                         },
                         {
-                            path: 'inheritance/c-C',
+                            path: 'c-C',
                             component: ChildC,
                         },
                         {
-                            path: 'inheritance/c-D',
+                            path: 'c-D',
                             component: ChildD,
                         },
                 ]
@@ -72,11 +72,11 @@ const routes = [
                 children: [
 
             {
-                path: 'pinia/a',
+                path: 'a',
                 component: PiniaA
             },
             {
-                path: 'pinia/b',
+                path: 'b',
                 component: PiniaB
             }
                 ]

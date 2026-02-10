@@ -4,5 +4,5 @@
 </template>
 
 <script setup>
-import GnbHeader from '../commons/GnbHeader.vue';
+import GnbHeader from '@/components/commons/GnbHeader.vue';
 </script>

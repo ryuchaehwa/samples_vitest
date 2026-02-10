@@ -1,5 +1,5 @@
 <template>
-    axios main
+<router-view></router-view>
 </template>
 
 <script></script>

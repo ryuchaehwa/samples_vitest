@@ -5,10 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "vitest"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "github-markdown-css": "^5.9.0",
+    "markdown-it": "^14.1.0",
     "pinia": "^3.0.4",
     "vue": "^3.2.13",
     "vue-router": "^4.6.4"
@@ -16,13 +19,20 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.28.6",
+    "@pinia/testing": "^1.0.3",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^2.4.6",
     "axios": "^1.13.5",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^10.7.0",
+    "jsdom": "^28.0.0",
     "msw": "^2.12.9",
+    "raw-loader": "^4.0.2",
     "vitest": "^4.0.18",
     "vue-eslint-parser": "^10.2.0"
   },

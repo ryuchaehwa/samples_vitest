@@ -8,7 +8,8 @@
 import { ref } from 'vue'
 import { router } from '@/router'
 
-const menus = ref([{name: 'Axios', key: 'axios'}, {name: 'Inheritance', key: 'inheritance'}, {name: 'Pinia', key: 'pinia'}])
+// LINK
+const menus = ref([{ name: 'Axios', key: 'axios' }, { name: 'Inheritance', key: 'inheritance' }, { name: 'Pinia', key: 'pinia' }])
 
 /** routing */
 const changeTo = (name) => {

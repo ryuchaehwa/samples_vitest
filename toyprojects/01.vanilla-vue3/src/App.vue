@@ -16,6 +16,10 @@ body {
   padding: 0 !important;
   margin: 0 !important
 }
+
+.views-main {
+  padding: 40px 80px
+}
 </style>
 
 <template>
