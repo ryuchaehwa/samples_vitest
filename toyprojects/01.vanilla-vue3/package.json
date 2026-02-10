@@ -23,6 +23,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^10.7.0",
     "msw": "^2.12.9",
+    "vitest": "^4.0.18",
     "vue-eslint-parser": "^10.2.0"
   },
   "eslintConfig": {

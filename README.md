@@ -28,3 +28,8 @@ API 테스트|	Axios 호출|	80%|	Vitest + MSW
 ## 📝 프로젝트별 상세 설명
 ## 01. vanilla-vue3
 * ts를 사용하지 않은 바닐라 버전
+
+---
+
+## Checklist
+* 추가 예정
