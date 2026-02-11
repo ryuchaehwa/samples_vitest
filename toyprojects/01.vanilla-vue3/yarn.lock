@@ -4956,6 +4956,11 @@ make-dir@^4.0.0:
   dependencies:
     semver "^7.5.3"
 
+markdown-it-anchor@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.npmjs.org/markdown-it-anchor/-/markdown-it-anchor-9.2.0.tgz"
+  integrity sha512-sa2ErMQ6kKOA4l31gLGYliFQrMKkqSO0ZJgGhDHKijPf0pNFM9vghjAh3gn26pS4JDRs7Iwa9S36gxm3vgZTzg==
+
 markdown-it@^14.1.0:
   version "14.1.0"
   resolved "https://registry.npmjs.org/markdown-it/-/markdown-it-14.1.0.tgz"
@@ -5919,6 +5924,11 @@ pretty-error@^4.0.0:
   dependencies:
     lodash "^4.17.20"
     renderkid "^3.0.0"
+
+prismjs@^1.30.0:
+  version "1.30.0"
+  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.30.0.tgz"
+  integrity sha512-DEvV2ZF2r2/63V+tK8hQvrR2ZGn10srHbXviTlcv7Kpzw8jWiNTqbVgjO3IY8RxrrOUF8VPMQQFysYYYv0YZxw==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"

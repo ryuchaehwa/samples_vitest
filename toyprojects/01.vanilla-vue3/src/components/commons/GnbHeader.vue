@@ -9,7 +9,7 @@ import { ref } from 'vue'
 import { router } from '@/router'
 
 // LINK
-const menus = ref([{ name: 'Axios', key: 'axios' }, { name: 'Inheritance', key: 'inheritance' }, { name: 'Pinia', key: 'pinia' }])
+const menus = ref([{ name: 'Axios', key: 'axios' }, { name: 'Inheritance', key: 'inheritance' }, { name: 'Pinia', key: 'pinia' }, {name: 'Vue-Router', key: 'router'}])
 
 /** routing */
 const changeTo = (name) => {

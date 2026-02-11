@@ -33,7 +33,7 @@
    ]
    ```
 
-# Sample Vitest Tody Porjects
+# Sample Vitest Toy Porjects
 
 - Vue3 + Vitest = TDD를 스터디 및 습득을 위한 토이 프로젝트
 - 작성 중
