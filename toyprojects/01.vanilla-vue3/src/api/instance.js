@@ -8,8 +8,6 @@ const axiosInstance = axios.create({
   },
 });
 
-====
-
 // 인터셉터 설정 (나중에 TDD로 하나씩 채워갈 부분입니다)
 axiosInstance.interceptors.response.use(
   (response) => response,
