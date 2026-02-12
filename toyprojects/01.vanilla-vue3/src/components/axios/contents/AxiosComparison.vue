@@ -1,3 +1,7 @@
 <template>
-    new 
+    <div></div> 
 </template>
+
+<script setup>
+
+</script>

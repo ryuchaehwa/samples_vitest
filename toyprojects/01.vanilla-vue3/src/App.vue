@@ -18,7 +18,7 @@ body {
 }
 
 .views-main {
-  padding: 40px 80px
+  padding: 40px 80px;
 }
 </style>
 

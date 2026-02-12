@@ -1,6 +1,6 @@
 <template>
     <GnbHeader></GnbHeader>
-    <router-view></router-view>
+    <router-view class="main-body"></router-view>
     <FooterContainer></FooterContainer>
 </template>
 
@@ -8,3 +8,9 @@
 import GnbHeader from '@/components/commons/GnbHeader.vue';
 import FooterContainer from '@/components/commons/FooterContainer.vue';
 </script>
+
+<style>
+.main-body {
+    margin: 80px 0 0 0;
+}
+</style>
