@@ -13,9 +13,11 @@
     "github-markdown-css": "^5.9.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0",
-    "pinia": "^3.0.4",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.3",
     "prismjs": "^1.30.0",
-    "vue": "^3.2.13",
+    "vitest": "3.2",
+    "vue": "^3.4.26",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
@@ -29,13 +31,12 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/test-utils": "^2.4.6",
-    "axios": "^1.13.5",
+    "axios": "^1.6.8",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^10.7.0",
     "jsdom": "^28.0.0",
     "msw": "^2.12.9",
     "raw-loader": "^4.0.2",
-    "vitest": "^4.0.18",
     "vue-eslint-parser": "^10.2.0"
   },
   "eslintConfig": {
