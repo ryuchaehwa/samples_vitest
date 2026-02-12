@@ -1,7 +1,8 @@
 <template>
+
 <div class="btn-box">
     <router-link to="/axios/all">
-  <button class="intro-btn" >전체 정리 문서 보기</button>
+  <button class="intro-btn" >전체 문서 보기</button>
   </router-link>  
 
   <router-link to="/axios/comparison">
@@ -11,8 +12,10 @@
     <router-link to="/axios/tdd">
         <button class="intro-btn" >TDD 관련 코드 예제만 보기</button>
     </router-link>
+
 </div>
-<router-view></router-view>
+
+
 </template>
 
 
@@ -31,6 +34,7 @@
   border: none;
   font-size: 30px;
   border-radius: 150px;
+  border: 1px solid #ddd
 }
 
 .intro-btn:hover {

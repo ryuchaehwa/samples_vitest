@@ -6,7 +6,7 @@ import * as MarkdownIt from 'markdown-it';
 import mdFile from '../mds/axiosdoc.md'
 import 'github-markdown-css/github-markdown-light.css'; 
 import Prism from 'prismjs'
-import 'prismjs/themes/prism.css'; // 기본 테마 불러오기
+import 'prismjs/themes/prism.css';
 import anchor from 'markdown-it-anchor';
 
 // 언어 설정 (필요시)
