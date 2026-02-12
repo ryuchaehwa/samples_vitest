@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { onBeforeMount, ref} from 'vue';
 import * as MarkdownIt from 'markdown-it';
-import mdFile from './axios.md'
+import mdFile from '../mds/axiosdoc.md'
 import 'github-markdown-css/github-markdown-light.css'; 
 import Prism from 'prismjs'
 import 'prismjs/themes/prism.css'; // 기본 테마 불러오기
@@ -105,10 +105,10 @@ const getFakeRestApi_NEW = async () => {
 
       <div>
         <h3>현재 학습중인 axios 패턴의 시각화 자료(google gemini)</h3>
-        <img src="../../assets/imgs/axios.png" alt="">
+        <img src="../../../assets/imgs/axios.png" alt="">
         <hr />
         <h3>패턴 단순 시각화(직접 제작-)</h3> 
-        <img src="../../assets/imgs/axios_vi.png" alt="">
+        <img src="../../../assets/imgs/axios_vi.png" alt="">
       </div>
       
     </div>

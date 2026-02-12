@@ -1,95 +1,97 @@
+import AxiosContainer from "@/components/axios/AxiosContainer.vue";
+import AxiosComparison from "@/components/axios/contents/AxiosComparison.vue";
+import AxiosDoc from "@/components/axios/contents/AxiosDoc.vue";
+import AxiosTdd from "@/components/axios/contents/AxiosTdd.vue";
+import AxiosView from "@/views/AxiosView.vue";
+import MainView from "@/views/MainView.vue";
 import { createRouter, createWebHistory } from "vue-router";
-
-import ChildA from "@/components/inheritance/ChildA.vue";
-import ChildC from "@/components/inheritance/ChildC.vue";
-import ChildD from "@/components/inheritance/ChildD.vue";
-import ChildB from "@/components/inheritance/ChildB.vue";
-import ParentA from "@/components/inheritance/ParentA.vue";
-import ParentC from "@/components/inheritance/ParentC.vue";
-import ParentB from "@/components/inheritance/ParentB.vue";
-import PiniaA from "@/components/pinia/PiniaA.vue";
-import PiniaB from "@/components/pinia/PiniaB.vue";
-import MainComponent from "@/views/MainComponent.vue";
-import InheritanceComponent from "@/views/InheritanceComponent.vue";
-import PiniaComponent from "@/views/PiniaComponent.vue";
-import AxiosComponent from "@/views/AxiosComponent.vue";
-import RouterComponent from "@/views/RouterComponent.vue";
-import AxiosIntro from "@/components/axios/AxiosIntro.vue";
 
 const routes = [
   {
     path: "/",
-    component: MainComponent,
+    component: MainView,
     children: [
       {
         path: "axios",
-        component: AxiosComponent,
+        component: AxiosView,
         children: [
           {
             path: "",
-            component: AxiosIntro,
+            component: AxiosContainer,
+          },
+          {
+            path: "all",
+            component: AxiosDoc,
+          },
+          {
+            path: "comparison",
+            component: AxiosComparison,
+          },
+          {
+            path: "tdd",
+            component: AxiosTdd,
           },
         ],
       },
-      {
-        path: "router",
-        component: RouterComponent,
-        children: [
-          {
-            path: "",
-            component: RouterComponent,
-          },
-        ],
-      },
-      {
-        path: "inheritance",
-        component: InheritanceComponent,
-        children: [
-          {
-            path: "p-a",
-            component: ParentA,
-          },
+      // {
+      //   path: "router",
+      //   component: RouterComponent,
+      //   children: [
+      //     {
+      //       path: "",
+      //       component: RouterComponent,
+      //     },
+      //   ],
+      // },
+      // {
+      //   path: "inheritance",
+      //   component: InheritanceComponent,
+      //   children: [
+      //     {
+      //       path: "p-a",
+      //       component: ParentA,
+      //     },
 
-          {
-            path: "p-b",
-            component: ParentB,
-          },
-          {
-            path: "p-C",
-            component: ParentC,
-          },
-          {
-            path: "c-a",
-            component: ChildA,
-          },
-          {
-            path: "c-b",
-            component: ChildB,
-          },
-          {
-            path: "c-C",
-            component: ChildC,
-          },
-          {
-            path: "c-D",
-            component: ChildD,
-          },
-        ],
-      },
-      {
-        path: "pinia",
-        component: PiniaComponent,
-        children: [
-          {
-            path: "a",
-            component: PiniaA,
-          },
-          {
-            path: "b",
-            component: PiniaB,
-          },
-        ],
-      },
+      //     {
+      //       path: "p-b",
+      //       component: ParentB,
+      //     },
+      //     {
+      //       path: "p-C",
+      //       component: ParentC,
+      //     },
+      //     {
+      //       path: "c-a",
+      //       component: ChildA,
+      //     },
+      //     {
+      //       path: "c-b",
+      //       component: ChildB,
+      //     },
+      //     {
+      //       path: "c-C",
+      //       component: ChildC,
+      //     },
+      //     {
+      //       path: "c-D",
+      //       component: ChildD,
+      //     },
+      //   ],
+      // },
+      // {
+      //   path: "pinia",
+      //   component: PiniaComponent,
+      //   children: [
+      //     {
+      //       path: "a",
+      //       component: PiniaA,
+      //     },
+      //     {
+      //       path: "b",
+      //       component: PiniaB,
+      //     },
+      //   ],
+      // },
     ],
   },
 ];
