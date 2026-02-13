@@ -1,6 +1,4 @@
 <script setup>
-
-import axios from 'axios';
 import { onBeforeMount, ref} from 'vue';
 import * as MarkdownIt from 'markdown-it';
 import mdFile from '../mds/axiosdoc.md'
@@ -13,7 +11,6 @@ import anchor from 'markdown-it-anchor';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-markup';
-
 
 const md = new (MarkdownIt.default || MarkdownIt)({
   linkify: true,
@@ -43,72 +40,25 @@ const convertedToHtml =ref('')
 
 onBeforeMount(async () => {
   convertedToHtml.value = context
-  await getFakeRestApi_OLD()
-  await getFakeRestApi_NEW()
 }) 
-
-const listOfContexts = ref([
-  { href: 'goal', name: '목표' },
-   { href: 'intro', name: '개요' }, 
-  { href: 'file-structure', name: '파일 구조' },
-  { href: 'detail', name: '폴더 및 파일 상세 설명'},
-  { href: 'init', name: 'TDD 진행 시 axios 관련 초기 셋업 코드' },
-  { href: 'env-init', name: '환경 설정' },
-  { href: 'msw-init', name: 'msw' },
-  { href: 'axios-init', name: 'axios' },
-])
-
-// AXIOS
-// BEFORE_TDD: 
-// 아래 코드는 axios 패턴을 적용하지 않고 일반적으로 작성하는 axios 콜 부분
-const getFakeRestApi_OLD = async () => {
-  try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/')
-     console.log('response', response)
-    if (response.status === 200) {
-      // Data Transforming(call별 일일이 작성)
-    }
-  } catch (e) {
-    // 기존에 일일이 작업한 에러 핸들링
-      console.error(e)      
-    }
-}
-
-// AXIOS
-// AFTER_TDD:
-// 아래 코드는 axios 패턴을 적용한 뒤 작성한 axios 콜 부분
-const getFakeRestApi_NEW = async () => {
- 
-}
-
 </script>
 
 <template>
   <div class="views-main">
     <h1>Axios 네트워크를 모킹해봅시다. 현재 컴포넌트 (AxiosMocking.vue)</h1>
-
     <h2>모킹 전(TDD 전), 선 작업(기존 프로젝트의 경우 리팩토링 혹은 신규인 경우 패턴에 맞게 개발)</h2>
     <div>(필수 아닌 필수. 만약 개별 컴포넌트 단위에서 axios를 부른다면, 차후 TDD 작업 시 모킹지옥이 펼쳐지거나, 테스트 코드가 터질 위험성이 있음.
       물론, 클로드 코드같은 어시스턴트를 사용하면 큰 문제는 없을 수 있으나, 이 역시 프로젝트 규모가 큰 경우엔 ... 좀 터지는게 많지 않을까요? 핫핫핫! )</div>
       <div class="markdown-body axios-body-frame" >
-            <!-- <aside class="toc-wrapper">
-      <nav class="toc">
-        <h4>Table of Contents</h4>
-        <ul >
-          <li v-for="item in listOfContexts" :key="item.href">
-            <a :href="item.id" @click.prevent="scrollTo(item.href)" >{{ item.name }}</a>
-          </li>
-          </ul>
-      </nav>
-    </aside> -->
       <div v-html="convertedToHtml" ></div>
-
       <div>
         <h3>현재 학습중인 axios 패턴의 시각화 자료(google gemini)</h3>
         <img src="../../../assets/imgs/axios.png" alt="">
         <hr />
-        <h3>패턴 단순 시각화(직접 제작-)</h3> 
+        <h3>패턴 단순 시각화(직접 제작)</h3> 
         <img src="../../../assets/imgs/axios_vi.png" alt="">
+        <h3>axios 흐름도(직접 제작)</h3>
+        <img src="../../../assets/imgs/axiosflow.png" alt="">
       </div>
       
     </div>

@@ -5,6 +5,8 @@ import axiosComparisonNew from '../mds/axios_comparison_new.md'
 import axiosComparisonOld from '../mds/axios_comparison_old.md'
 import axiosComparisonNetwork from '../mds/axios_comparison_network.md'
 import { md } from '@/modules/mdModule';
+import 'github-markdown-css/github-markdown-light.css'; 
+
 
 const context = md.render(axioscomparisonMd)
 const convertedToHtml = ref('')
@@ -31,8 +33,8 @@ onBeforeMount(async () => {
         <div class="d-f">
             <div >
                 <div class="markdown-body" v-html="oldSampleCodeToHtml"></div>
-                
-                <h1>TDD를 위법 axios 패턴화 중 네트워크 개발 방법</h1>
+
+                <h1>TDD를 위한 axios 패턴화 중 비지니스 로직 별 네트워크 개발 방법</h1>
                 <div class="markdown-body" v-html="networkSampleCodeToHtml"></div>
             </div>
             <div class="markdown-body" v-html="newSampleCodeToHtml"></div>
