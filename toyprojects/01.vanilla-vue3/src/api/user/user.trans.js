@@ -28,19 +28,7 @@
 export const transformUser = (raw) => {
   if (!raw) return null;
   console.log("4단계: Transformer 로직 수행 - 단일 사용자일 경");
-  return {
-    id: raw.id,
-    name: raw.username,
-    email: raw.email,
-    address:
-      raw.address.street +
-      " " +
-      raw.address.suite +
-      " " +
-      raw.address.city +
-      " " +
-      raw.address.zipcode,
-  };
+  return formatUserInfo(raw);
 };
 
 /**
@@ -49,17 +37,23 @@ export const transformUser = (raw) => {
 export const transformUserList = (rawList) => {
   if (!Array.isArray(rawList)) return [];
   console.log("4단계: Transformer 로직 수행 - 목록일 경우");
-  return rawList.map((raw) => ({
-    id: raw.id,
-    name: raw.username,
-    email: raw.email,
+  return rawList.map((raw) => formatUserInfo(raw));
+};
+
+const formatUserInfo = (data) => {
+  let user = {
+    id: data.id,
+    name: data.name,
+    email: data.email,
     address:
-      raw.address.street +
+      data.address.street +
       " " +
-      raw.address.suite +
+      data.address.suite +
       " " +
-      raw.address.city +
+      data.address.city +
       " " +
-      raw.address.zipcode,
-  }));
+      data.address.zipcode,
+  };
+
+  return user;
 };

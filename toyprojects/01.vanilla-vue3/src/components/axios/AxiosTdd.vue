@@ -1,6 +1,6 @@
 <template>
     <div style="margin: 0 100px">
-        <h2>실제 TDD를 위한 axios 패턴 적용 컴포넌트 AxiosTdd.vue의 결과화면</h2>
+        <h2>실제 TDD를 위한 axios 패턴 적용 컴포넌트 AxiosTdd.vue의 결과화면(결과 화면은 차이 없음)</h2>
         <h2>
             F12 누르셔서 콘솔 확인해보세요.
         </h2> 
@@ -9,7 +9,7 @@
             <li>사용한 fake API: https://jsonplaceholder.typicode.com/</li>
         </ul>
        
-        <table style="margin: 20px 0 0 0">
+        <table style="margin: 20px 0 20px 0">
             <tr v-for="user in users" :key="user.id">
                 <td>{{ user.id }}</td>
                 <td>{{ user.name }}</td>
@@ -17,6 +17,8 @@
                 <td>{{ user.address }}</td>
             </tr>
         </table>
+        <h2 >MSW를 활용하여 Mocking 후, 진행한 테스트 결과 화면</h2>
+        <img src="../../assets/imgs/basic_msw.png" style="width: 80%" alt="">
     </div>
 </template>
 
