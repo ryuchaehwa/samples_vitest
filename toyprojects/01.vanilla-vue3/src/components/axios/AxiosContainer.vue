@@ -9,9 +9,7 @@
     <router-link to="/axios/tdd">
         <button class="intro-btn intro-btn-center" >TDD 관련 코드 예제만 보기</button>
     </router-link>
-    <router-link to="/axios/study">
-        <button class="intro-btn intro-btn-center" >스터디 관련 내용 정리</button>
-    </router-link>
+    
 </div>
 <hr />
   <div style="margin: 40px 0 0 0;">

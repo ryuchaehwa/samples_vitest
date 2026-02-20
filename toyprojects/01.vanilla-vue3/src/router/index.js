@@ -1,7 +1,6 @@
 import AxiosContainer from "@/components/axios/AxiosContainer.vue";
 import AxiosComparison from "@/components/axios/contents/AxiosComparison.vue";
 import AxiosDoc from "@/components/axios/contents/AxiosDoc.vue";
-import AxiosStudy from "@/components/axios/contents/AxiosStudy.vue";
 import AxiosTdd from "@/components/axios/contents/AxiosTdd.vue";
 import AxiosView from "@/views/AxiosView.vue";
 import MainView from "@/views/MainView.vue";
@@ -31,10 +30,6 @@ const routes = [
           {
             path: "tdd",
             component: AxiosTdd,
-          },
-          {
-            path: "study",
-            component: AxiosStudy,
           },
         ],
       },

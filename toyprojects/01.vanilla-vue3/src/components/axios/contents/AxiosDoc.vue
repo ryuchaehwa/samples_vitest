@@ -11,6 +11,7 @@ import anchor from 'markdown-it-anchor';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-markup';
+import AxiosStudy from './AxiosStudy.vue';
 
 const md = new (MarkdownIt.default || MarkdownIt)({
   linkify: true,
@@ -59,8 +60,8 @@ onBeforeMount(async () => {
         <img src="../../../assets/imgs/axios_vi.png" alt="">
         <h3>axios 흐름도(직접 제작)</h3>
         <img src="../../../assets/imgs/axiosflow.png" alt="">
-      </div>
-      
+            <AxiosStudy></AxiosStudy>
+      </div> 
     </div>
     </div>
 </template>
@@ -77,7 +78,7 @@ h1, h2 {
 }
 
  .axios-body-frame div {
-  width: 50%;
+  /* width: 50%; */
  }
 
  .axios-body-frame div:nth-child(1) {

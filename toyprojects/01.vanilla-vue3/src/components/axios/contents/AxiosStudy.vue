@@ -15,7 +15,7 @@ onBeforeMount(async () => {
 
 
 <template>
-  <div class="views-main" >
-    <div v-html="convertedToHtml" class="markdown-body" ></div>
+  <div >
+    <div v-html="convertedToHtml"  ></div>
   </div>
 </template>
