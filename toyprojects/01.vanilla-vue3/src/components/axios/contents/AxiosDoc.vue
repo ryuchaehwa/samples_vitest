@@ -60,7 +60,9 @@ onBeforeMount(async () => {
         <img src="../../../assets/imgs/axios_vi.png" alt="">
         <h3>axios 흐름도(직접 제작)</h3>
         <img src="../../../assets/imgs/axiosflow.png" alt="">
-            <AxiosStudy></AxiosStudy>
+        <h3>axios + MSW 흐름도(직접 제작)</h3>    
+        <img src="../../../assets//imgs/final.png" alt="">
+        <AxiosStudy></AxiosStudy>
       </div> 
     </div>
     </div>
