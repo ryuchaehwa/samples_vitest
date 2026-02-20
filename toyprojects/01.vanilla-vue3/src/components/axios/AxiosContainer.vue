@@ -7,7 +7,10 @@
       <button class="intro-btn intro-btn-center" >axios 패턴 적용 전/후 코드 비교 보기</button>
     </router-link>
     <router-link to="/axios/tdd">
-        <button class="intro-btn" >TDD 관련 코드 예제만 보기</button>
+        <button class="intro-btn intro-btn-center" >TDD 관련 코드 예제만 보기</button>
+    </router-link>
+    <router-link to="/axios/study">
+        <button class="intro-btn intro-btn-center" >스터디 관련 내용 정리</button>
     </router-link>
 </div>
 <hr />
@@ -31,10 +34,10 @@ import AxiosTdd from './AxiosTdd.vue';
 
 .intro-btn {
   height: 100px;
-  width: 500px;
+  width: 350px;
   background-color: #f4f4f4;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 150px;
   border: 1px solid #ddd
 }
@@ -45,6 +48,6 @@ import AxiosTdd from './AxiosTdd.vue';
 }
 
 .intro-btn-center {
-margin: 0 40px
+margin: 0 0 0 40px
 }
 </style>

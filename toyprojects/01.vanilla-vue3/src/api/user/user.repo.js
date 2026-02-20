@@ -23,7 +23,8 @@ export const userRepository = {
       return transformUserList(data);
     } catch (e) {
       console.log("2/3단계 에러", e);
-      errorHandling(e.response.status);
+      errorHandling(e.response?.status);
+      throw e;
     }
   },
 
@@ -41,16 +42,21 @@ export const userRepository = {
       console.error("🚨 에러 상세 내용:", e.message);
       console.error("🚨 에러 코드:", e.code); // 'ECONNABORTED'면 진짜 타임아웃
 
-      errorHandling(e.response.status);
+      errorHandling(e.response?.status);
+      throw e;
     }
   },
 };
 
 const errorHandling = (status) => {
-  if (status === 401) {
-    console.error("인증이 만료되었습니다. 다시 로그인해주세요.");
-    // 필요 시 여기서 로그아웃 처리 등을 수행
-  } else if (status === 400) {
-    console.error("잘못된 요청입니다.");
+  if (status === 500) {
+    throw new Error("SERVER_EXPLODED");
   }
+
+  // if (status === 401) {
+  //   console.error("인증이 만료되었습니다. 다시 로그인해주세요.");
+  //   // 필요 시 여기서 로그아웃 처리 등을 수행
+  // } else if (status === 400) {
+  //   console.error("잘못된 요청입니다.");
+  // }
 };

@@ -1,6 +1,7 @@
 // vitest.config.js
 import { defineConfig } from "vitest/config";
 import vue from "@vitejs/plugin-vue";
+import path from "path";
 
 export default defineConfig({
   plugins: [vue()], // Vitest가 .vue 파일을 이해하게 해줍니다.
@@ -11,5 +12,8 @@ export default defineConfig({
     environment: "node",
     // 위에서 만든 setup 파일의 경로를 지정
     setupFiles: ["./vitest.setup.js"],
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
 });

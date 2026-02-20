@@ -39,6 +39,10 @@ instance.interceptors.response.use(
   (error) => {
     // 공통에러처리 로직 구현 부분 400, 401, 500 등
     console.log("2단계 에러: axios 인터셉터");
+    if (error.response?.status === 400) {
+      // 여기서 커스텀 에러로 변환하거나 전역 알림을 띄울 수 있습니다.
+      return Promise.reject(new Error("400_interceptor"));
+    }
     return Promise.reject(error);
   },
 );

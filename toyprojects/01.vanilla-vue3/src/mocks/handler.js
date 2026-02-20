@@ -13,6 +13,7 @@ export const handlers = [
     ]);
   }),
 
+  // 단일 건 조회 및 파라미터 관련 테스트
   http.get("https://jsonplaceholder.typicode.com/users/:id", ({ params }) => {
     console.log("params", params);
     return HttpResponse.json({

@@ -1,5 +1,12 @@
 <template>
     <div style="margin: 0 100px">
+        <h2>도움되는 사이트</h2>
+        <ul>
+            <li>
+                <a target="_blank" href="https://velog.io/@jay3925/msw-msw로-Auth-관련-토큰-Mocking-해보기2-구현하기">msw-msw로-Auth-관련-토큰-Mocking-해보기2-구현하기</a>
+            <a href="https://mswjs.io/docs/best-practices/" target="_blank"></a>
+            </li>
+        </ul>
         <h2>실제 TDD를 위한 axios 패턴 적용 컴포넌트 AxiosTdd.vue의 결과화면(결과 화면은 차이 없음)</h2>
         <h2>
             F12 누르셔서 콘솔 확인해보세요.
@@ -19,6 +26,8 @@
         </table>
         <h2 >MSW를 활용하여 Mocking 후, 진행한 테스트 결과 화면</h2>
         <img src="../../assets/imgs/basic_msw.png" style="width: 80%" alt="">
+        <h2>MSW를 활용하여 에러처리 Mokcing 후, 진행한 테스트 결과 화면</h2>
+        <img src="../../assets/imgs/error.png" style="width: 80%" alt="">
     </div>
 </template>
 
