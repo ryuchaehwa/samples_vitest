@@ -1,5 +1,5 @@
 <template>
-    pinia main
+    <router-view></router-view>
 </template>
 
 <script></script>

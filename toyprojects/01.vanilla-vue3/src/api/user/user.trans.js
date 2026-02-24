@@ -53,6 +53,7 @@ const formatUserInfo = (data) => {
       data.address.city +
       " " +
       data.address.zipcode,
+    etc: data.etc || "-",
   };
 
   return user;

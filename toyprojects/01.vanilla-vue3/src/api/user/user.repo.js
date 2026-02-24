@@ -14,13 +14,17 @@ export const userRepository = {
   async getUsers() {
     try {
       console.log("1단계: Repository에서 API 호출");
-      const { data } = await instance.get(
+      //  const { data } = await instance.get(
+      //    "https://jsonplaceholder.typicode.com/users",
+      //  );
+      const response = await instance.get(
         "https://jsonplaceholder.typicode.com/users",
       );
 
-      console.log("3단계: Transformer에게 데이터 전달", data);
+      // console.log("3단계: Transformer에게 데이터 전달", data);
 
-      return transformUserList(data);
+      // return transformUserList(data);
+      return response;
     } catch (e) {
       console.log("2/3단계 에러", e);
       errorHandling(e.response?.status);

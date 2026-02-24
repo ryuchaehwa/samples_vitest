@@ -2,8 +2,10 @@ import AxiosContainer from "@/components/axios/AxiosContainer.vue";
 import AxiosComparison from "@/components/axios/contents/AxiosComparison.vue";
 import AxiosDoc from "@/components/axios/contents/AxiosDoc.vue";
 import AxiosTdd from "@/components/axios/contents/AxiosTdd.vue";
+import PiniaContainer from "@/components/pinia/PiniaContainer.vue";
 import AxiosView from "@/views/AxiosView.vue";
 import MainView from "@/views/MainView.vue";
+import PiniaView from "@/views/PiniaView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -30,6 +32,16 @@ const routes = [
           {
             path: "tdd",
             component: AxiosTdd,
+          },
+        ],
+      },
+      {
+        path: "pinia",
+        component: PiniaView,
+        children: [
+          {
+            path: "",
+            component: PiniaContainer,
           },
         ],
       },
@@ -77,21 +89,6 @@ const routes = [
       //       component: ChildD,
       //     },
       //   ],
-      // },
-      // {
-      //   path: "pinia",
-      //   component: PiniaComponent,
-      //   children: [
-      //     {
-      //       path: "a",
-      //       component: PiniaA,
-      //     },
-      //     {
-      //       path: "b",
-      //       component: PiniaB,
-      //     },
-      //   ],
-      // },
     ],
   },
 ];
