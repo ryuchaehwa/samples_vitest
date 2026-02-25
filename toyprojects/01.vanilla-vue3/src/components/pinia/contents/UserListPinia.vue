@@ -1,6 +1,27 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
+import { useUserStore } from '../../../stores/user.js'
+
+const userStore = useUserStore()
+const {users} = storeToRefs(userStore)
+
+console.log('userStore', userStore)
+
+onMounted(async() => {
+   await userStore.fetchUsers()
+})
+
+</script>
 
 
 <template>
-user list
+<table>
+    <tr v-for="user in users" :key="user.id">    
+        <td>{{ user.id }} </td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address }}</td>
+    </tr>
+</table>
 </template>

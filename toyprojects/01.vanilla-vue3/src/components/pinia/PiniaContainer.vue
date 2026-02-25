@@ -12,8 +12,6 @@ const convertedToHtml = ref('')
 onBeforeMount(async () => {
     convertedToHtml.value = context
 })
-
-
 </script>
 
 <template>
@@ -29,6 +27,5 @@ onBeforeMount(async () => {
                 <img src="../../assets/imgs/axios_pinia_tdd.jpg" alt="">
             </div>
         </div>
-
     </div>
 </template>

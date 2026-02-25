@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
 import { userRepository } from "@/api/user/user.repo";
+import { transformUserList } from "@/api/user/user.trans";
 
 export const useUserStore = defineStore("user", () => {
   // State
@@ -17,13 +18,12 @@ export const useUserStore = defineStore("user", () => {
     errorMessage.value = "";
     try {
       const response = await userRepository.getUsers();
-      console.log("store-users", response);
-      users.value = response.data;
+      users.value = transformUserList(response.data);
     } catch (error) {
       users.value = [];
       errorMessage.value = "서버 에러가 발생했습니다.";
     }
   }
 
-  return { users, errorMessage, adminUsers, fetchUsers };
+  return { users, errorMessage, fetchUsers };
 });
